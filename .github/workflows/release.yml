@@ -26,7 +26,7 @@ jobs:
         uses: tendermint/starport/actions/release/vars@develop
 
       - name: Issue Release Assets
-        uses: tendermint/starport/actions/cli@v0.17.3
+        uses: tendermint/starport/actions/cli@develop
         if: ${{ steps.vars.outputs.should_release == 'true' }}
         with:
           args: chain build --release --release.prefix ${{ steps.vars.outputs.tarball_prefix }} -t linux:amd64 -t darwin:amd64
