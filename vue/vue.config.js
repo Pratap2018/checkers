@@ -1,10 +1,12 @@
 const path = require('path')
 
+
 module.exports = {
-	devServer: {
+		devServer: {
 		disableHostCheck: true
 	},
 	configureWebpack: {
+		
 		resolve: {
 			symlinks: false,
 			alias: {
